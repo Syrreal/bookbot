@@ -13,3 +13,8 @@ def letter_count(text):
         else:
             letter_dict[letter] = 1
     return letter_dict
+
+def sort_dict(dict):
+    sorted = [(key, value) for key, value in dict.items() if key.isalpha()]
+    sorted.sort(reverse=True, key=lambda x: x[1])
+    return sorted
