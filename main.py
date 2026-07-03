@@ -14,15 +14,15 @@ def main(path):
     book = path
     print("========== BOOKBOT ==========")
     print(f'Analyzing book found at {book}...')
-    print('---------- Word Count ----------')
 
     text = get_book_text(book)
     num_words = total_words(text)
-    print(f'Found {num_words} total words')
 
     num_letters = letter_count(text)
     sorted_letters = sort_dict(num_letters)
     
+    print('---------- Word Count ----------')
+    print(f'Found {num_words} total words')
     print("-------- Character Count --------")
     pretty_print_characters(sorted_letters)
     print("========== END ==========")
